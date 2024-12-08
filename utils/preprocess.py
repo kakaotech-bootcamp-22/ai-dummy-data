@@ -1,6 +1,6 @@
 import logging
 from kiwipiepy import Kiwi
-from pykospacing import Spacing
+# from pykospacing import Spacing
 
 # 로깅 설정
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
