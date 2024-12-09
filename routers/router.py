@@ -7,11 +7,11 @@ from utils.task_logic import send_post_request
 
 router = APIRouter()
 
-## 실제 서버
-# backend_url_param = "/config/ktb22/backend.server.url"
+# 실제 서버
+backend_url_param = "/config/ktb22/backend.server.url"
 
-# 테스트
-backend_url_param = "/config/ktb22/backend.test.url"
+# # 테스트
+# backend_url_param = "/config/ktb22/backend.test.url"
 
 # 각 파라미터 값 가져오기
 BACKEND_URL = get_ssm_parameter(backend_url_param)
