@@ -1,21 +1,17 @@
-# POST 요청 전송
-import os
 from typing import Dict, Any
 import httpx
-from dotenv import load_dotenv
 from fastapi import HTTPException
-from aws_config import get_ssm_parameter
 from utils.shared import tasks
 
 
-#백엔드 서버 파라미터 경로
-backend_url_param = "/config/ktb22/backend.server.url"
-
-# # 테스트
+# #백엔드 서버 파라미터 경로
+# # backend_url_param = "/config/ktb22/backend.server.url"
+#
+# # # 테스트
 # backend_url_param = "/config/ktb22/backend.test.url"
-
-# 각 파라미터 값 가져오기
-BACKEND_URL = get_ssm_parameter(backend_url_param)
+#
+# # 각 파라미터 값 가져오기
+# BACKEND_URL = get_ssm_parameter(backend_url_param)
 
 # POST 요청 전송 함수
 async def send_post_request(url: str, data: Dict[str, Any]) -> Dict:
@@ -41,17 +37,6 @@ async def process_task(task_id: str):
         raise HTTPException(status_code=404, detail=f"Task ID '{task_id}' not found")
 
     task = tasks[task_id]
-
-    # if not task:
-    #     raise ValueError(f"Task ID '{task_id}' not found")
-    #
-    # if task["status"] == "COMPLETED":
-    #     print(f"Task {task_id} is already completed. Skipping.")
-    #     return  # 이미 완료된 작업은 중복 처리하지 않음
-    #
-    # if task["status"] == "IN_PROGRESS":
-    #     print(f"Task {task_id} is already in progress. Skipping.")
-    #     return  # 진행 중인 작업은 중복 처리하지 않음
 
     # print("Task data:", task)  # task 전체 출력
     if "result" not in task or task["result"] is None:
