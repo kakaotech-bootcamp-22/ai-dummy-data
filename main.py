@@ -5,7 +5,10 @@ from fastapi import FastAPI
 # from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
+from routers.router import BACKEND_URL
+
 app = FastAPI()
+print("백엔드 url : ", BACKEND_URL)
 
 """# CORS 미들웨어 설정
 origins = [
