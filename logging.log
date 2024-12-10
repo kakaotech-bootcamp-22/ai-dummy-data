@@ -1,0 +1,8 @@
+2024-12-10 14:19:21,338 - utils.task_logic - INFO - Starting POST request to URL: http://localhost:8000/review-check/response
+2024-12-10 14:19:21,338 - utils.task_logic - DEBUG - Request data: {'requestId': '123e4567-e89b-12d3-a456-426614174000', 'blogUrl': 'https://blog.naver.com/example/12345', 'summaryTitle': 'Suspicious Review', 'summaryText': 'The review contains repetitive phrases and unnatural language patterns.', 'score': 35, 'evidence': 'Identical review across multiple posts.'}
+2024-12-10 14:19:21,338 - utils.task_logic - DEBUG - Initializing httpx.AsyncClient
+2024-12-10 14:19:21,372 - utils.task_logic - INFO - Sending POST request
+2024-12-10 14:19:21,378 - utils.task_logic - DEBUG - Request headers: Headers({'host': 'localhost:8000', 'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.25.0', 'content-length': '299', 'content-type': 'application/json'})
+2024-12-10 14:19:21,378 - utils.task_logic - DEBUG - Response status code: 200
+2024-12-10 14:19:21,378 - utils.task_logic - INFO - Request successful with status code: 200
+2024-12-10 14:19:21,378 - utils.task_logic - DEBUG - Response data: !!!! got response !!!!!

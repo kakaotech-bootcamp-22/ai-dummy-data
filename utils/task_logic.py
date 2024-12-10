@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 # 파일 핸들러 설정
-file_handler = logging.FileHandler('http_requests.log')
+file_handler = logging.FileHandler('logging.log')
 file_handler.setLevel(logging.DEBUG)
 
 # 콘솔 핸들러 설정
